@@ -9,9 +9,9 @@ class Director(models.Model):
         return self.name
 
 
-class Movies(model.Model):
+class Movies(models.Model):
     title = models.CharField(max_length=60, help_text="Titulo de la pelicula")
-    director = models.ForeignKey('Director', on_delete=models.SET_NULL, null=true)
+    director = models.ForeignKey('Director', on_delete=models.SET_NULL, null=True)
     synopsis = models.CharField(max_length=120, help_text="Sinopsis de la pelicula")
 
 
