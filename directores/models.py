@@ -7,3 +7,13 @@ class Director(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Movies(model.Model):
+    title = models.CharField(max_length=60, help_text="Titulo de la pelicula")
+    director = models.ForeignKey('Director', on_delete=models.SET_NULL, null=true)
+    synopsis = models.CharField(max_length=120, help_text="Sinopsis de la pelicula")
+
+
+    def __str__(self):
+        return self.title
