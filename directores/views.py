@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from models import Director, Movies
+from .models import Director, Movies
 
 
 def index(request):
@@ -10,8 +10,8 @@ def index(request):
         request,
         'index.html',
         context={
-            'Numero de Directores': directors,
-            'Numero de peliculas': movies
+            'NDirectores': directors,
+            'Npeliculas': movies
         }
     )
 
