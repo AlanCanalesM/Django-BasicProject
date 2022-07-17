@@ -6,4 +6,13 @@ def index(request):
     directors = Director.objects.all().count()
     movies = Movies.objects.all().count()
 
+    return render(
+        request,
+        'index.html',
+        context={
+            'Numero de Directores': directors,
+            'Numero de peliculas': movies
+        }
+    )
+
 
